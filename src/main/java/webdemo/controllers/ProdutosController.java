@@ -44,6 +44,11 @@ public class ProdutosController extends Controller {
 		if(isValid(formData)) {
 			String nome = formData.get("nome");
 			String descricao = formData.get("descricao");
+
+
+			System.out.println(nome);
+			System.out.println(descricao);
+
 			
 			Produto Produto = new Produto(nome, descricao);
 			Produto.salvar();
@@ -99,7 +104,7 @@ public class ProdutosController extends Controller {
 		}
 		
 		if(!formData.containsKey("descricao") || formData.get("descricao").isEmpty()) {
-			getRequest().setAttribute("DescricaoInvalido", "O descricao é obrigatório!");
+			getRequest().setAttribute("DescricaoInvalido", "A descrição é obrigatória!");
 			isValid = false;
 		}
 				

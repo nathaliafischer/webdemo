@@ -22,12 +22,12 @@
 			<tr>
 				<th scope="col">#</th>
 				<th scope="col">Nome</th>
-				<th scope="col">Descricao</th>
+				<th scope="col">Descrição</th>
 				<th scope="col"></th>
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="produto" items="${produtos}">
+			<c:forEach var="produto" items="${Produtos}">
 				<tr>
 					<th scope="row">${produto.id}</th>
 					<td>${produto.nome}</td>

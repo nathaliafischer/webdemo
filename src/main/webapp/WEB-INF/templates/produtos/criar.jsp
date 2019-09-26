@@ -8,22 +8,22 @@
 <head>
 	<c:import url="/WEB-INF/templates/common/_metatags.jsp" />
 	<c:import url="/WEB-INF/templates/common/_bootstrap_css.jsp" />	
-	<title>Criar Usuário</title>
+	<title>Criar Produto</title>
 </head>
 <body class="container">
-	<h1>Criar Usuário</h1>
+	<h1>Criar Produto</h1>
 	<form method="post" action="/produtos">
 		<div class="form-group">
 			<minha:validatedinputtext rotulo="Nome" valor="${param.nome}"
 				erroValidacao="${NomeInvalido}" invalido="${empty NomeInvalido}"
-				textoPlaceholder="Seu Nome" 
+				textoPlaceholder="Nome do Produto" 
 				idCampo="nome-input" nomeCampo="nome" /> 
 		</div>
 		<div class="form-group">
 			<minha:validatedinputtext rotulo="Descricao" valor="${param.descricao}"
 				erroValidacao="${DescricaoInvalido}" invalido="${empty DescricaoInvalido}"
-				textoPlaceholder="Seu Descricao"
-				idCampo="Descricao-input" nomeCampo="Descricao" />	
+				textoPlaceholder="Descrição do Produto"
+				idCampo="descricao-input" nomeCampo="descricao" />	
 		</div>
 		<a href="/produtos" class="btn btn-danger">Cancelar</a>
 		<button type="submit" class="btn btn-primary">Salvar</button>

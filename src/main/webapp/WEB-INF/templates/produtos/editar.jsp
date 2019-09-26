@@ -17,14 +17,14 @@
 		<div class="form-group">
 		<minha:validatedinputtext rotulo="Nome" valor="${Produto.nome}"
 			erroValidacao="${NomeInvalido}" invalido="${empty NomeInvalido}"
-			textoPlaceholder="Seu Nome" 
+			textoPlaceholder="Nome do Produto" 
 			idCampo="nome-input" nomeCampo="nome" /> 
 		</div>
 		<div class="form-group">
-			<minha:validatedinputtext rotulo="Produto" valor="${Produto.produto}"
-				erroValidacao="${ProdutoInvalido}" invalido="${empty ProdutoInvalido}"
-				textoPlaceholder="Seu Produto"
-				idCampo="produto-input" nomeCampo="produto" />	
+			<minha:validatedinputtext rotulo="Descrição" valor="${Produto.descricao}"
+				erroValidacao="${DescricaoInvalido}" invalido="${empty DescricaoInvalido}"
+				textoPlaceholder="Descrição do Produto"
+				idCampo="descricao-input" nomeCampo="descricao" />	
 		</div>
 		
 		<a href="/produtos" class="btn btn-danger">Cancelar</a>
