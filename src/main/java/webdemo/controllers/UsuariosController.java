@@ -21,10 +21,8 @@ public class UsuariosController extends Controller {
 	public void list() throws ServletException, IOException {
 		List<Usuario> usuarios = Usuario.Todos();
 		
-		getRequest().setAttribute("Usuarios", usuarios);
-			
-		getRequest().getRequestDispatcher("/WEB-INF/templates/usuarios/list.jsp")
-			.forward(getRequest(), getResponse());
+		alterarAtributo("Usuarios", usuarios);		
+		fazerRequest("usuarios/list.jsp");
 	}
 	
 	@Override
@@ -34,8 +32,7 @@ public class UsuariosController extends Controller {
 	
 	@Override
 	public void create() throws ServletException, IOException {
-		getRequest().getRequestDispatcher("/WEB-INF/templates/usuarios/criar.jsp")
-			.forward(getRequest(), getResponse());
+		fazerRequest("usuarios/criar.jsp");
 	}
 	
 	@Override
@@ -60,10 +57,8 @@ public class UsuariosController extends Controller {
 	public void edit(int id) throws ServletException, IOException {
 		Usuario usuario = Usuario.GetById(id);
 		
-		getRequest().setAttribute("Usuario", usuario);
-		
-		getRequest().getRequestDispatcher("/WEB-INF/templates/usuarios/editar.jsp")
-			.forward(getRequest(), getResponse());	
+		alterarAtributo("Usuario", usuario);
+		fazerRequest("usuarios/editar.jsp");
 	}
 	
 	@Override
