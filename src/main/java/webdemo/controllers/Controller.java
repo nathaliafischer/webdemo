@@ -57,11 +57,11 @@ public class Controller {
 		getRequest() .getRequestDispatcher("/WEB-INF/templates/"+caminho) .forward(getRequest(), getResponse());
 	}
 
-	public void alterarAtributo(String nomeAtributo, List usuarios) {
-		getRequest().setAttribute(nomeAtributo, usuarios);
+	public void alterarAtributo(String nomeAtributo, List lista) {
+		getRequest().setAttribute(nomeAtributo, lista);
 	}
 
-	public void alterarAtributo (String nomeAtributo, Usuario usuario) {
-		getRequest().setAttribute(nomeAtributo, usuario);
+	public void alterarAtributo (String nomeAtributo, Object objeto) {
+		getRequest().setAttribute(nomeAtributo, objeto);
 	}
 }
