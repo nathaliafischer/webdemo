@@ -21,10 +21,8 @@ public class ProdutosController extends Controller {
 	public void list() throws ServletException, IOException {
 		List<Produto> Produtos = Produto.Todos();
 		
-		getRequest().setAttribute("Produtos", Produtos);
-			
-		getRequest().getRequestDispatcher("/WEB-INF/templates/produtos/list.jsp")
-			.forward(getRequest(), getResponse());
+		alterarAtributo("Produtos", produtos); 
+		fazerRequest("produtos/list.jsp");
 	}
 	
 	@Override
